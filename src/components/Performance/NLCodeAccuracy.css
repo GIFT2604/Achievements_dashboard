@@ -1,0 +1,111 @@
+/* ============================================================
+   NL CODE ACCURACY
+   ============================================================ */
+.nlcode-section {
+    margin-bottom: 32px;
+}
+
+.nlcode-card {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    backdrop-filter: blur(12px);
+}
+
+.nlcode-top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.nlcode-gauge-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.nlcode-gauge-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.nlcode-gauge-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent-green);
+    line-height: 1;
+}
+
+.nlcode-gauge-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.nlcode-stats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nlcode-stat-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-border);
+}
+
+.nlcode-stat-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.nlcode-stat-value {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nlcode-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 4px;
+    padding-top: 16px;
+    border-top: 1px solid var(--glass-border);
+}
+
+.nlcode-chart-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.nlcode-chart-fill {
+    width: 100%;
+    max-width: 48px;
+    border-radius: var(--radius-sm);
+    transition: height 0.8s ease;
+}
+
+.nlcode-chart-label {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.nlcode-chart-value {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent-green);
+}

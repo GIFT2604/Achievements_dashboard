@@ -1,0 +1,220 @@
+/* ============================================================
+   PORTFOLIO SKILLS — PROFICIENCY, CERTS & ENDORSEMENTS
+   ============================================================ */
+.portfolio-skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.portfolio-skills-card,
+.portfolio-certs-card,
+.portfolio-endorse-card {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    backdrop-filter: blur(12px);
+}
+
+/* Skill bars */
+.portfolio-skills-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.portfolio-skill-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.portfolio-skill-label {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.portfolio-skill-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.portfolio-skill-level {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.portfolio-skill-bar-track {
+    flex: 1;
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.portfolio-skill-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.8s ease;
+}
+
+.portfolio-skill-pct {
+    width: 40px;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+/* Bottom row: certs + endorsements */
+.portfolio-skills-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Certifications */
+.portfolio-certs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.portfolio-cert-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.2s ease;
+}
+
+.portfolio-cert-item:hover {
+    background: rgba(124, 58, 237, 0.04);
+    border-color: rgba(124, 58, 237, 0.1);
+}
+
+.portfolio-cert-status {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.portfolio-cert-status.verified {
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--accent-green);
+}
+
+.portfolio-cert-status.pending {
+    background: rgba(249, 115, 22, 0.12);
+    color: var(--accent-orange);
+}
+
+.portfolio-cert-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.portfolio-cert-info h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.portfolio-cert-info span {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.portfolio-cert-badge {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--accent-green);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    white-space: nowrap;
+}
+
+/* Endorsements */
+.portfolio-endorse-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.portfolio-endorse-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.portfolio-endorse-bar-wrap {
+    flex: 1;
+}
+
+.portfolio-endorse-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.portfolio-endorse-skill {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.portfolio-endorse-count {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-purple);
+}
+
+.portfolio-endorse-bar {
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    margin-bottom: 3px;
+}
+
+.portfolio-endorse-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--gradient-accent);
+}
+
+.portfolio-endorse-top {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+@media (max-width: 800px) {
+    .portfolio-skills-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-skill-label {
+        width: 100px;
+    }
+}

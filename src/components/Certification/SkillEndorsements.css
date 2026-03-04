@@ -1,0 +1,92 @@
+/* ============================================================
+   SKILL ENDORSEMENTS
+   ============================================================ */
+.endorsements-section {
+    margin-bottom: 32px;
+}
+
+.endorsements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.endorsement-item {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.endorsement-item:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+    background: var(--bg-card-hover);
+}
+
+.endorsement-rank {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(124, 58, 237, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-purple);
+    flex-shrink: 0;
+}
+
+.endorsement-rank.top-3 {
+    background: rgba(255, 215, 0, 0.15);
+    color: var(--accent-gold);
+}
+
+.endorsement-skill {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.endorsement-bar-bg {
+    flex: 2;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.endorsement-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--gradient-accent);
+    transition: width 1s ease;
+}
+
+.endorsement-count {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    width: 40px;
+    text-align: right;
+}
+
+.endorsement-top {
+    font-size: 12px;
+    color: var(--text-muted);
+    width: 120px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+
+    .endorsement-bar-bg,
+    .endorsement-top {
+        display: none;
+    }
+}

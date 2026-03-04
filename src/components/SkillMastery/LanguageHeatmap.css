@@ -1,0 +1,129 @@
+/* ============================================================
+   LANGUAGE HEATMAP
+   ============================================================ */
+.heatmap-section {
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+}
+
+.section-title svg {
+    color: var(--accent-cyan);
+}
+
+.heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.heatmap-card {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.heatmap-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.heatmap-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: var(--shadow-glow);
+}
+
+.heatmap-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.heatmap-card-lang {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.heatmap-card-level {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.level-Expert {
+    background: rgba(255, 215, 0, 0.15);
+    color: var(--accent-gold);
+}
+
+.level-Advanced {
+    background: rgba(124, 58, 237, 0.15);
+    color: var(--accent-purple);
+}
+
+.level-Intermediate {
+    background: rgba(0, 212, 255, 0.15);
+    color: var(--accent-cyan);
+}
+
+.level-Beginner {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--accent-green);
+}
+
+.heatmap-card-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.heatmap-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.heatmap-stat-label {
+    color: var(--text-muted);
+}
+
+.heatmap-stat-value {
+    font-weight: 600;
+}
+
+.heatmap-quality-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.heatmap-quality-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 1.2s ease;
+}
